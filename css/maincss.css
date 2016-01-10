@@ -1,0 +1,79 @@
+.loader:before,
+.loader:after,
+.loader {
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation: load 1.8s infinite ease-in-out;
+    animation-fill-mode: both;
+   animation: load 1.8s infinite ease-in-out;
+   -moz-animation-fill-mode: both;
+   -moz-animation: load 1.8s infinite ease-in-out;
+}
+
+.loader {
+    font-size: 20px;
+    margin: 250px  20px 0px -20px;
+    position: relative;
+    animation-delay: -0.16s;
+    top: 50%;
+  left:50%; 
+
+}
+
+.loader:before {
+    left: -65px;
+    animation-delay: -0.30s;
+    -webkit-animation-delay: -0.30s;
+    -moz-animation-delay: -0.30s;
+}
+
+.loader:after {
+    left: 70px;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+}
+
+@-webkit-keyframes load {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 100px 0 -52px #ffa31a;
+    }
+    40% {
+        box-shadow: 0 100px 0 0 #ffa31a;
+    }
+}
+
+@keyframes load {
+    0%,
+    100% {
+        box-shadow: 0 100px 0 -52px red;
+    }
+    40% {
+        box-shadow: 0 100px 0 0 #ffa31a;
+    }
+    80% {
+        box-shadow: 0 100px 0 -52px blue;
+    }
+}
+body{
+  background-image: url(http://www.hdwallpapersonly.com/wp-content/uploads/2013/07/background-images-for-websites-3.jpg);
+}
+#prev,#next{
+  position: fixed;
+  top:50%;
+  font-size: 40px;
+}
+#next{
+  right:25px;
+}
+#prev{
+  left: 25px;
+}
